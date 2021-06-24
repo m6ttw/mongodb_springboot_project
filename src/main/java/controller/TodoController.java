@@ -17,7 +17,7 @@ public class TodoController {
     private TodoRepository todoRepository;
 
     @GetMapping("/todos")
-    public ResponseEntity<> getAllTodos(){
+    public ResponseEntity<?> getAllTodos(){
         List<TodoDTO> todos = todoRepository.findAll();
         if(todos.size() > 0) {
             return new ResponseEntity<List<TodoDTO>>(todos, HttpStatus.OK);
