@@ -13,13 +13,13 @@ import java.util.Date;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "todos")
-public class TodoDTO {
+@Document(collection = "quests")
+public class QuestDTO {
 
     @Id
     private String id;
 
-    private String todo;
+    private String quest;
 
     private String description;
 
