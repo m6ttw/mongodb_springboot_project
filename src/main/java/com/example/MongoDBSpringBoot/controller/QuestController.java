@@ -63,5 +63,15 @@ public class QuestController {
             return new ResponseEntity<>("Quest not found with id " + id, HttpStatus.NOT_FOUND);
         }
     }
+
+    @DeleteMapping("/quests/{id}")
+    public ResponseEntity<?> deleteById(@PathVariable("id") String id){
+        try {
+            questRepository.deleteById(id);
+            return new ResponseEntity<>("Successfully deleted with id " + id, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
 }
 
