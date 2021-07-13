@@ -9,10 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Setter
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Document(collection = "quests")
 public class QuestDTO {
 
@@ -21,9 +21,13 @@ public class QuestDTO {
 
     private String quest;
 
+    private String giver;
+
     private String description;
 
     private Boolean completed;
+
+    private int reward;
 
     private Date createdAt;
 
